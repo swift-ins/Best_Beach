@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Best Emotions{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My Discoveries</h1>
+        <div class="header-image">
+            <p>Do you love the unexpected and prefer independent discoveries?</p>
+            <p>Are you impressed by places that others don't know about?</p>
+            <p>Are you not interested in your usual vacation? </p>
+            <p>Look into my World. Perhaps here you will hide something for yourself.</p>
+        </div>
+        <nav>
+            <a href="/"> Escape with me</a> |
+            <a href="/about">4You</a>
+        </nav>
+        
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2025. e-mail: natalja.rejenta@gmail.com 
+            <img src="/static/image_small.jpg" alt="Contact" style="height: 24px; vertical-align: middle; margin-left: 10px; cursor: pointer;" onclick="showPhone()">
+            <span id="phone" style="margin-left: 10px; display: none;">+371 26533829</span>
+        </p>
+    </footer> 
+    <script>
+        function showPhone() {
+            const phone = document.getElementById('phone');
+            phone.style.display = phone.style.display === 'none' ? 'inline' : 'none';
+        }
+    </script>
+       
+</body>
+</html>

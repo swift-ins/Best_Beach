@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Pictures{% endblock %}
+
+{% block content %}
+
+<div class="marquee-wrapper">
+    <h2 class="marquee" id="marquee-text">Come to my Best</h2>
+</div>
+
+<hr>
+
+<div class="gallery">
+    <div class="city-card">
+        <img src="/static/krim.jpg"  alt="Krim">
+        <p>Cape Kapchik, Crimea</p>
+    </div>
+    <div class="city-card">
+        <img src="/static/armdeper.jpg" alt="PT">
+        <p>Cliffs and beach, Armacao de Pera, PT</p>
+    </div>
+    <div class="city-card">
+        <img src="/static/rhodes.jpg" alt="ES">
+        <p>Over the island Rhodes, GR</p>
+    </div>
+    <div class="city-card">
+        <img src="/static/f-v.jpg" alt="ES">
+        <p>Fuerteventura</p>
+    </div>
+    <div class="city-card">
+        <img src="/static/f-v.jpg" alt="ES">
+        <p>Fuerteventura</p>
+        
+    </div>
+</div>
+
+<script>
+    document.getElementById('marquee-text').addEventListener('click', function() {
+        this.style.animationPlayState = 'paused';
+    });
+</script>
+{% endblock %}
