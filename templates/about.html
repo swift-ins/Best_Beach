@@ -3,9 +3,19 @@
 {% block title %}About{% endblock %}
 
 {% block content %}
-<h2>About</h2>
-<p>Do you love the unexpected and prefer independent discoveries?</p>
-<p>Are you impressed by places that others don't know about?</p>
-<p>Are you not interested in your usual vacation? </p>
-<p>Look into my World. Perhaps here you will hide something for yourself.</p>
+<div class="contact-form">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xwpldajn" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- Бегущая строка -->
+<div class="scroll-text" onclick="toggleScroll(this)">
+    <p>If you'd like to know more about these places, I'd be happy to share—just get in touch! And even if we’ve never met, I’ll gladly tell you all about these places!</p>
+</div>
+
 {% endblock %}

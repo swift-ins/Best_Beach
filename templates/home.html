@@ -1,42 +1,98 @@
 {% extends "base.html" %}
 
-{% block title %}Pictures{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
-
-<div class="marquee-wrapper">
-    <h2 class="marquee" id="marquee-text">Come to my Best</h2>
-</div>
-
-<hr>
-
-<div class="gallery">
-    <div class="city-card">
-        <img src="/static/krim.jpg"  alt="Krim">
-        <p>Cape Kapchik, Crimea</p>
-    </div>
-    <div class="city-card">
-        <img src="/static/armdeper.jpg" alt="PT">
-        <p>Cliffs and beach, Armacao de Pera, PT</p>
-    </div>
-    <div class="city-card">
-        <img src="/static/rhodes.jpg" alt="ES">
-        <p>Over the island Rhodes, GR</p>
-    </div>
-    <div class="city-card">
-        <img src="/static/f-v.jpg" alt="ES">
-        <p>Fuerteventura</p>
-    </div>
-    <div class="city-card">
-        <img src="/static/f-v.jpg" alt="ES">
-        <p>Fuerteventura</p>
+<div class="carousel-container">
+    <div class="carousel-track">
+        <!-- Повтори карточки для бесконечной прокрутки -->
         
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='heviz.jpg') }}" alt="HU">
+            <div class="caption">Heviz, Hungary</div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='cres.jpg') }}" alt="HR">
+            <div class="caption">Cres, Croatia</div>
+        </div>        
+        
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='f-v-2.jpg') }}" alt="ES">
+            <div class="caption">Fuerteventura, Spain</div>
+        </div> 
+        
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='krim.jpg') }}" alt="NON">
+            <div class="caption">Crimea</div>
+        </div> 
+        
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='malta-1.jpg') }}" alt="MA">
+            <div class="caption">Gozo, Malta</div>
+        </div> 
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='f-v-3.jpg') }}" alt="ES">
+            <div class="caption">Fuerteventura, Spain</div>
+        </div> 
+        
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='lanzar-1.jpg') }}" alt="ES">
+            <div class="caption">Lanzarote, Spain</div>
+        </div>     
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='stockholm.jpg') }}" alt="SE">
+            <div class="caption">Stockholm, Sweden</div>
+        </div>   
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='lanzar-2.jpg') }}" alt="ES">
+            <div class="caption">Lanzarote, Spain</div>
+        </div> 
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='malta-2.jpg') }}" alt="ES">
+            <div class="caption">Malta</div>
+        </div> 
+
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='rabac.jpg') }}" alt="HR">
+            <div class="caption">Rabac, Croatia</div>
+        </div> 
+        
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='ischia-1.jpg') }}" alt="IT">
+            <div class="caption">Ischia, Italy</div>
+        </div> 
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='armdeper.jpg') }}" alt="PT">
+            <div class="caption">Algarve, Portugal</div>
+        </div> 
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='ischia-2.jpg') }}" alt="IT">
+            <div class="caption">Ischia, Italy</div>
+        </div> 
+     
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='tossa.jpg') }}" alt="ES">
+            <div class="caption">Tossa de Mar, Spain</div>
+        </div> 
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='malorka.jpg') }}" alt="ES">
+            <div class="caption">Mallorka, Spain</div>
+        </div> 
+        <div class="photo-card">
+            <img src="{{ url_for('static', filename='ibiza-1.jpg') }}" alt="ES">
+            <div class="caption">Ibiza, Spain</div>
+        </div>
+    
+     
+   
+        
+
+        <!-- Повтор для зацикленности -->
+        <div class="photo-card"><img src="{{ url_for('static', filename='img1.jpg') }}" alt="Фото 1"></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='img2.jpg') }}" alt="Фото 2"></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='img3.jpg') }}" alt="Фото 3"></div>
+        <div class="photo-card"><img src="{{ url_for('static', filename='img4.jpg') }}" alt="Фото 4"></div>
     </div>
 </div>
-
-<script>
-    document.getElementById('marquee-text').addEventListener('click', function() {
-        this.style.animationPlayState = 'paused';
-    });
-</script>
 {% endblock %}

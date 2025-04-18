@@ -1,14 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     font-style: italic;
-    background-color: hsl(0, 0%, 5%);
+    background-color: hwb(193 93% 4%);
     margin: 0;
     padding: 0;
-    color: #f9f6fd;
+    color:#e6e3eb;
 }
 
 header, footer {
-    background-color: #5d6167;
+    background-color: hsl(76, 60%, 20%);
     padding: 10px 20px;
     text-align: center;
 }
@@ -21,7 +21,7 @@ nav {
 nav a {
     font-family: 'Georgia', serif;
     font-style: italic;
-    color: #f9f6fd;
+    color: #f2f6f8;
     font-size: 1.5em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     text-decoration: none;
@@ -37,13 +37,13 @@ nav a {
 }
 
 .city-card {
-    border: 1px solid #ccc;
+    border: 1px solid #2a2929;
     border-radius: 10px;
     overflow: hidden;
     width: 250px;
     text-align: center;
-    background-color: #10100e;
-    box-shadow: 0 2px 5px rgba(132, 203, 39, 0.1);
+    background-color: hsl(75, 11%, 14%);
+    box-shadow: 0 2px 5px rgba(133, 204, 40, 0.1);
 }
 
 .city-card img {
@@ -60,7 +60,7 @@ nav a {
 h1 {
     font-family: 'Georgia', serif;
     font-style: italic;
-    color: #f9f6fd; 
+    color: #e1dbe7; 
     font-size: 2.5em;
     margin-top: 0.5em;
     text-shadow: 1px 1px 2px rgba(24, 41, 14, 0.1);
@@ -69,7 +69,7 @@ h1 {
 h2 {
     font-family: 'Georgia', serif;
     font-style: italic;
-    color: #f9f6fd; 
+    color: hsl(76, 60%, 20%); 
     font-size: 1.5em;
     margin-top: 0.5em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -79,4 +79,140 @@ h2 {
     overflow: hidden;
     position: relative;
     height: 3em; /* высота под заголовок, можно адаптировать */
+}
+/* Основные стили для формы и контактов */
+.contact-form, .contact {
+    width: 300px; /* Фиксированная ширина (не растягивается) */
+    margin: 40px auto; /* Больший отступ сверху и снизу для центрирования */
+    padding: 25px;
+    background-color: hsl(76, 60%, 20%); /* Светлый фон для лучшей читаемости */
+    border-radius: 8px; /* Меньшее скругление углов (прямоугольная форма) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    border: 1px solid #e0e0e0; /* Тонкая рамка */
+}
+
+/* Заголовок формы */
+.contact-form h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #efeff1;
+    text-align: center;
+}
+
+/* Текст под заголовком */
+.contact-form > p {
+    margin-bottom: 20px;
+    color: hsl(76, 60%, 20%);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Поля ввода */
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Прямоугольные поля с легким скруглением */
+    font-size: 13px;
+    transition: border 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* Кнопка отправки */
+.contact-form button {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    background-color: #2a2525;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px; /* Прямоугольная кнопка */
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #861414;
+}
+
+/* Дополнительный текст (если нужен) */
+.scroll-text {
+    margin-top: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 0;
+}
+
+.scroll-text p {
+    display: inline-block;
+    font-size: 14px;
+    color: #faefef;
+    animation: scroll-left 40s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #000;
+    padding: 1em 0;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+    animation-play-state: running;
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused; /* ⏸️ остановка при наведении */
+}
+
+.photo-card {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.photo-card img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 📱 МЕДЛЕННАЯ ПРОКРУТКА НА МОБИЛЬНЫХ */
+@media (max-width: 768px) {
+    .carousel-track {
+        animation-duration: 60s;
+    }
 }
