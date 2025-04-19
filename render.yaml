@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-best-emotions
+    env: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
